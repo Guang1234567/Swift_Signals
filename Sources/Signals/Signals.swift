@@ -40,6 +40,7 @@ public class Signals {
         case int
         case quit
         case ill
+        case trap
         case abrt
         case kill
         case pipe
@@ -61,6 +62,8 @@ public class Signals {
                 return CInt(SIGQUIT)
             case .ill:
                 return CInt(SIGILL)
+            case .trap:
+                 return CInt(SIGTRAP)
             case .abrt:
                 return CInt(SIGABRT)
             case .kill:
